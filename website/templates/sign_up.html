@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+<!--This extends base.html and then you can call the blocks you wish to change-->
+{% block content %}
+<!--This extends base.html and then you can call the blocks you wish to change-->
+<form method="POST">
+  <!-- Builds an html form which means once the form is submitted then send a post request to the backend  -->
+  <h3 align="center">Sign Up</h3>
+  <!-- Creates header size 3 that is aligned in the center and holds the text "Sign Up"-->
+  <div class="form-group">
+    <!--Bootstrap Class="form-group"-->
+    <label for="email">Email Address</label>
+    <!--Puts label above the "email" input field, idk why you need to put for there-->
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+    />
+    <!--Above code is an input field, the type and class is defined for bootstrap, the id is defined for the label, the 
+    name is defined because this is what the form is going to be represented as when we pass the information to the backend-->
+  </div>
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <!--Puts label above the "firstName" input field-->
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      placeholder="Enter first name"
+    />
+    <!-- The input is now text so that there is just text entered into the firstName input field -->
+  </div>
+  <div class="form-group">
+    <label for="password1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password1"
+      name="password1"
+      placeholder="Enter password"
+    />
+    <!-- The input is now type "password" so that the text entered into the input field doesn't show when typing into the passowrd input field -->
+  </div>
+  <div class="form-group">
+    <label for="password2">Password (Confirm)</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password2"
+      name="password2"
+      placeholder="Confirm password"
+    />
+    <!-- The input is now type "password" so that the text entered into the input field doesn't show when typing into the passowrd input field -->
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <!-- The button is held within this form and is defined as type "submit" so that when pressed the form is submitted-->
+</form>
+{% endblock %}
